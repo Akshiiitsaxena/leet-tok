@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { FilterType } from "@/types/questions";
 
 export default function HomePage() {
   const router = useRouter();
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<FilterType>(null);
 
-  const handleOptionClick = (option: string) => {
+  const handleOptionClick = (option: FilterType) => {
     setSelectedOption(option);
   };
 
